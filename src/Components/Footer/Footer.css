@@ -1,0 +1,41 @@
+.footerParentDiv {
+  width: 100%;
+  padding: 0 1rem;
+}
+.footerParentDiv .content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  background: #ebeeef;
+  padding: 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.content ul{
+  list-style: none;
+}
+.footerParentDiv .content .heading p {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0 0 0.5rem 0;
+}
+
+.footerParentDiv .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #002f34;
+  color: whitesmoke;
+}
+
+.footerParentDiv .footer p {
+  margin: 0;
+}
+
+
+@media only screen and (max-width: 700px) {
+  .footerParentDiv .content{
+    flex-direction: column;
+  }
+}

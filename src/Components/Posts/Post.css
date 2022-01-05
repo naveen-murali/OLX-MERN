@@ -1,0 +1,107 @@
+.postParentDiv{
+  width: 100%;
+  padding: 0 1rem;
+}
+.moreView, .recommendations {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #ebeeef;
+  border-radius: 4px;
+}
+
+.heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.heading span:first-child {
+  font-size: 24px;
+  color: #002f34;
+  display: inline-block;
+}
+.heading span:last-child {
+  font-size: 14px;
+  color: #002f34;
+}
+
+.cards{
+  padding: 1rem 0;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.cards::-webkit-scrollbar {
+  height: 5px;
+  border-radius: 1rem;
+}
+
+.cards::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+.cards::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+.cards::-webkit-scrollbar-thumb:hover {
+  background: rgba(85, 85, 85, 0.74); 
+}
+
+
+.card {
+  margin-right: 15px;
+  padding: 13px;
+  max-width: 222px;
+  width: 222px;
+  height: 270px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.card .favorite {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .image img {
+  height: 100px;
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  text-align: center;
+}
+
+.card .content{
+  flex-direction: column;
+}
+
+.card .content .rate {
+  margin-top: 10px;
+  font-size: larger;
+  font-weight: bold;
+}
+.card .content .kilometer {
+  font-size: medium;
+}
+.card .content .name {
+  font-size: small;
+}
+.card .date {
+  display: flex;
+  justify-content: flex-end;
+  font-size: small;
+}
+
+.recommendations .heading span {
+  font-size: 24px;
+  color: #002f34;
+}

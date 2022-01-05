@@ -1,0 +1,65 @@
+.loginParentDiv {
+  border: 1px solid black;
+  width: 25rem;
+  padding: 0 1rem 1rem 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+}
+
+.loginImgContainer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginImgContainer img{
+  width: 40%;
+  height: auto;
+}
+.createAnAccount{
+  text-transform: capitalize;
+  padding: 1rem 0 0 0;
+}
+.loginParentDiv .input {
+  width: 100%;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  outline-color: transparent;
+}
+
+.loginParentDiv button {
+  width: 100%;
+  height: 48px;
+  /* border-color: transparent; */
+  background-color: #002f34;
+  color: whitesmoke;
+  font-weight: 900;
+}
+
+.loginParentDiv button:hover {
+  background-color: white;
+  color: #002f34;
+  border: 2px solid #002f34;
+}
+
+.loginParentDiv a {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.errorSignup{
+  font-style: italic;
+  color: rgb(226, 0, 0);
+  margin: 0;
+}
+
+@media screen and (max-width: 450px) {
+  .loginParentDiv{
+    width: 95%;
+  }
+}

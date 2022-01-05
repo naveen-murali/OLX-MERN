@@ -1,0 +1,46 @@
+.bannerParentDiv {
+  padding-top: 4em;
+}
+
+.menuBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.categoryMenu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.categoryMenu span {
+  margin-right: 0.2rem;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.otherQuickOptions span {
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+.banner {
+  width: 100%;
+  padding: 0 1rem;
+  overflow: hidden;
+}
+.banner img{
+  width: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+  .otherQuickOptions {
+    display: none;
+  }
+  .bannerChildDiv .banner {
+    position: relative;
+  }
+}
