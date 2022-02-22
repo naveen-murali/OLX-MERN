@@ -1,20 +1,30 @@
 .viewParentDiv {
   padding-top: 4em;
+  padding-bottom: 4em;
+  width: 100%;
   display: flex;
+  background-color: rgba(221, 221, 221, 0.212);
 }
 .viewParentDiv .imageShowDiv {
   padding: 16px;
-  width: 70vw;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 .viewParentDiv .imageShowDiv img {
-  width: 65vw;
-  height: 85vh;
+  width: 50%;
 }
 
 .viewParentDiv .rightSection {
-  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10rem 0 0;
   margin-top: 3em;
-  width: 30vw;
+  width: 50%;
 }
 
 .viewParentDiv .rightSection .productDetails :first-child {
@@ -31,13 +41,16 @@
   padding: 6px;
   border-radius: 6px;
   margin-bottom: 2em;
-  width: 100%;
+  width: 60%;
+  background-color: #fff;
 }
 
 .viewParentDiv .rightSection .contactDetails {
+  width: 60%;
   border: 1px solid black;
   padding: 6px;
   border-radius: 6px;
+  background-color: #fff;
 }
 
 .viewParentDiv .rightSection .contactDetails :first-child {
@@ -47,4 +60,25 @@
   color: #002f34;
   font-weight: 400;
   padding: 0;
+}
+
+@media screen and (max-width: 700px){
+  .viewParentDiv {
+    flex-direction: column;
+  }
+  .viewParentDiv .rightSection,
+  .viewParentDiv .imageShowDiv{
+    width: 100%;
+  }
+  .viewParentDiv .rightSection{
+    padding: 1rem 1rem;  
+    margin-top: 0em;
+  }
+  .viewParentDiv .imageShowDiv img{
+    width: 100%;
+  }
+  .viewParentDiv .rightSection .contactDetails,
+  .viewParentDiv .rightSection .productDetails{
+    width: 100%;
+  }
 }

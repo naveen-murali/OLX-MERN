@@ -19,15 +19,15 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={ isUserAccess() ? <Home /> : <Navigate to="/login" /> } />
-        <Route path="/login" element={ isUserAccess() ? <Navigate to="/" /> : <Login /> } />
-        <Route path="/signup" element={ isUserAccess() ? <Navigate to="/" /> : <Signup /> } />
-        <Route path="/create" element={  isUserAccess() ? <Create /> : <Navigate to="/login" /> } />
-        <Route path="/viewpost" element={isUserAccess() ? <ViewPost /> : <Navigate to="/login" />} />
-        
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={isUserAccess() ? <Navigate to="/" /> : <Login />} />
+        <Route path="/signup" element={isUserAccess() ? <Navigate to="/" /> : <Signup />} />
+        <Route path="/create" element={isUserAccess() ? <Create /> : <Navigate to="/" />} />
+        <Route path="/viewpost/:id" element={isUserAccess() ? <ViewPost /> : <Navigate to="/" />} />
+
         {/* Admin router */}
         <Route path="/admin/login" element={isAdminAccess() ? <Navigate to="/admin" /> : <AdminLogin />} />
-        <Route path="/admin/*" element={ isAdminAccess() ? <Admin /> : <Navigate to="/admin/login" /> } />
+        <Route path="/admin/*" element={isAdminAccess() ? <Admin /> : <Navigate to="/admin/login" />} />
       </Routes>
     </BrowserRouter>
   );

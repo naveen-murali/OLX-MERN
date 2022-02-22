@@ -14,11 +14,11 @@ import { Link } from 'react-router-dom';
 
 function NavBar() {
   const { dispatch } = useGlobalContext();
-  
   const [user, setUser] = useState(null);
+
   const logout = () => {
     dispatch({ type: LOGOUT });
-    window.location.href = "/login";
+    window.location.href = "/";
   }
 
   useEffect(() => {
@@ -61,21 +61,20 @@ function NavBar() {
         </div>
 
         <div className="header-margin loginPage">
-          {
-            user
-              ? <span style={{cursor: "pointer"}} onClick={logout}>Logout</span>
-              : <span style={{ cursor: "pointer" }}>Login</span>
-          }
+          {user
+            ? <span style={{ cursor: "pointer" }} onClick={logout}>Logout</span>
+            : <Link to='/login' style={{ cursor: "pointer" }}>Login</Link>}
           <hr />
         </div>
-
-        <div className="header-margin sellMenu">
-          <SellButton></SellButton>
-          <div className="sellMenuContent">
-            <SellButtonPlus></SellButtonPlus>
-            <Link to="/create"><span>SELL</span></Link>
+        {user &&
+          <div className="header-margin sellMenu">
+            <SellButton></SellButton>
+            <div className="sellMenuContent">
+              <SellButtonPlus></SellButtonPlus>
+              <Link to="/create"><span>SELL</span></Link>
+            </div>
           </div>
-        </div>
+        }
       </div>
     </div>
   );
